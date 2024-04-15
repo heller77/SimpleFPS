@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Jetbrain Rider Cache
 .idea/
+
+/Assets/Model/blender
+/Assets/Model/blender.meta
