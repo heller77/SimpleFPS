@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using MyInputs;
+using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -7,16 +8,20 @@ namespace Players
     public class Player : ITickable
     {
         private PlayerMover _playerMover;
+        private MyInput _input;
 
         [Inject]
-        public Player(PlayerMover playerMover)
+        public Player(PlayerMover playerMover, MyInput myInput)
         {
             _playerMover = playerMover;
+            _input = myInput;
         }
 
         public void Tick()
         {
-            Debug.Log("tick");
+            var moveValue = _input.MoveValue;
+            this._playerMover.Move(moveValue);
+            Debug.Log(moveValue);
         }
     }
 }
