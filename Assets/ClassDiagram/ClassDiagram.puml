@@ -1,0 +1,61 @@
+﻿@startuml
+
+Players.PlayerAttacker ---> Weapons.IAttackable
+Players.PlayerMover --> Unity.CharacterController
+Players.PlayerMover --> Unity.Camera
+Managers.InputManager <- Players.Player
+Managers.AudioManager <- Players.Player
+Managers.EffectManger <- Players.Player
+namespace  Players{
+    Player *- PlayerMover
+    Player *-- PlayerAttacker
+
+    class Player{
+    }
+    note top of PlayerMover
+     キャラの移動
+     カメラの向き調整
+     end note
+    class PlayerMover{
+    }
+    
+    class PlayerAttacker{
+        IAttackable _attackable;
+        +Attack() :void
+    }
+    
+}
+Weapons.IAttackable ...> Enemys.IDamageable
+namespace Weapons {
+    interface IAttackable{}
+    IAttackable <|.. Gun    
+    class Gun{}
+    class GunMono extends Unity.MonoBehaviour{}
+}
+Enemys.IDamageable <|.. Enemys.Enemy
+
+namespace Enemys{
+    interface IDamageable{}
+    class Enemy{}
+    
+}
+Managers.EnemyManager <--- Enemys.Enemy
+namespace Managers{
+    class InputManager{
+    }
+    class AudioManager{}
+    
+    class EffectManger{}
+    
+    note top of EnemyManager 
+    敵の生成・削除
+    end note
+    class EnemyManager{
+    List<Enemys.Enemy> enemyslist;
+    }
+    
+    class BulletManager{}
+    
+    class GameLoop{}
+}
+@enduml
