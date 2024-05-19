@@ -487,6 +487,8 @@ MonoBehaviour:
   autoRun: 1
   autoInjectGameObjects: []
   playerCharacterController: {fileID: 1663318868}
+  _playerMoveParameter: {fileID: 11400000, guid: a09657b1edd54894ab993be23f764cf7,
+    type: 2}
 --- !u!4 &1583167931
 Transform:
   m_ObjectHideFlags: 0
