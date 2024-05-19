@@ -1,0 +1,15 @@
+﻿@startuml
+
+class GameLifeTimeScope{}
+
+Player *-- PlayerMover
+Player *-- MyInput
+class Player{
+         private PlayerMover _playerMover;
+         private MyInput _input;
+}
+class PlayerMover{
+private CharacterController _characterController;
+}
+class MyInput{}
+@enduml
