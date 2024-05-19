@@ -20,7 +20,7 @@ namespace Players
         public void Tick()
         {
             var moveValue = _input.MoveValue;
-            this._playerMover.Move(moveValue);
+            this._playerMover.Move(moveValue * Time.deltaTime);
             Debug.Log(moveValue);
         }
     }
