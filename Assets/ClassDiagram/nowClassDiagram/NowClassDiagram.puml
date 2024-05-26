@@ -4,12 +4,19 @@ class GameLifeTimeScope{}
 
 Player *-- PlayerMover
 Player *-- MyInput
+Player *-- IWeapon
 class Player{
          private PlayerMover _playerMover;
          private MyInput _input;
+         IWeapon _weapon;
 }
 class PlayerMover{
 private CharacterController _characterController;
 }
 class MyInput{}
+
+class HandGun extends IWeapon,IAttackable{}
+
+interface IWeapon{}
+interface IAttackable{}
 @enduml
