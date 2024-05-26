@@ -11,14 +11,13 @@ namespace Players
         private PlayerMover _playerMover;
         private MyInput _input;
 
-        private HandGun _handGun;
+        private IWeapon _weapon;
 
         [Inject]
         public Player(PlayerMover playerMover, MyInput myInput)
         {
             _playerMover = playerMover;
             _input = myInput;
-            _handGun = new HandGun(myInput);
         }
 
         public void Tick()
@@ -26,6 +25,11 @@ namespace Players
             var moveValue = _input.MoveValue;
             this._playerMover.Move(moveValue * Time.deltaTime);
             Debug.Log(moveValue);
+        }
+
+        public void SetWeapon(IWeapon weapon)
+        {
+            this._weapon = weapon;
         }
     }
 }
