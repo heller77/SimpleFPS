@@ -2,6 +2,7 @@
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using Weapons;
 
 namespace Players
 {
@@ -10,11 +11,14 @@ namespace Players
         private PlayerMover _playerMover;
         private MyInput _input;
 
+        private HandGun _handGun;
+
         [Inject]
         public Player(PlayerMover playerMover, MyInput myInput)
         {
             _playerMover = playerMover;
             _input = myInput;
+            _handGun = new HandGun(myInput);
         }
 
         public void Tick()
