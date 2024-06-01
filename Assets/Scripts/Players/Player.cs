@@ -11,13 +11,14 @@ namespace Players
         private PlayerMover _playerMover;
         private MyInput _input;
 
-        private IWeapon _weapon;
+        private WeaponController _weaponController;
 
         [Inject]
         public Player(PlayerMover playerMover, MyInput myInput)
         {
             _playerMover = playerMover;
             _input = myInput;
+            _weaponController = new WeaponController(myInput);
         }
 
         public void Tick()
@@ -26,9 +27,9 @@ namespace Players
             this._playerMover.Move(moveValue * Time.deltaTime);
         }
 
-        public void SetWeapon(IWeapon weapon)
+        public void SetWeapon(IAttackable weapon)
         {
-            this._weapon = weapon;
+            _weaponController.SetWeapon(weapon);
         }
     }
 }
