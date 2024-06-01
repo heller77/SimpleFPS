@@ -24,7 +24,6 @@ namespace Players
         {
             var moveValue = _input.MoveValue;
             this._playerMover.Move(moveValue * Time.deltaTime);
-            Debug.Log(moveValue);
         }
 
         public void SetWeapon(IWeapon weapon)
