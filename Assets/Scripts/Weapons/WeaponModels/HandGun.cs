@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-    public class HandGun : IAttackable , IWeapon
+    public class HandGun : MonoBehaviour, IAttackable, IWeapon
     {
         public HandGun(MyInputs.MyInput input)
         {

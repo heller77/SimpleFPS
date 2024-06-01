@@ -13,12 +13,15 @@ namespace Players
 
         private WeaponController _weaponController;
 
+        private PlayerMono _playerMono;
+
         [Inject]
-        public Player(PlayerMover playerMover, MyInput myInput)
+        public Player(PlayerMover playerMover, MyInput myInput, PlayerMono playerMono)
         {
             _playerMover = playerMover;
             _input = myInput;
             _weaponController = new WeaponController(myInput);
+            this._playerMono = playerMono;
         }
 
         public void Tick()
@@ -30,6 +33,11 @@ namespace Players
         public void SetWeapon(IAttackable weapon)
         {
             _weaponController.SetWeapon(weapon);
+        }
+
+        public Transform GetHandTransform()
+        {
+            return this._playerMono.Hand;
         }
     }
 }
