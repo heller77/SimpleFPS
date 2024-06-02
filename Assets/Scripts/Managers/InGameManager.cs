@@ -6,20 +6,24 @@ using Unity.VisualScripting;
 using UnityEngine;
 using VContainer.Unity;
 using Weapons;
+using Weapons.Bullets;
 
 namespace Managers
 {
-    public class InGameManager : IStartable
+    public class InGameManager : IStartable, ITickable
     {
         private InGameUIManager _inGameUIManager;
         private Player _player;
         private WeaponsData _weaponsData;
+        private BulletController _bulletController;
 
-        public InGameManager(InGameUIManager inGameUIManager, Player player, WeaponsData weaponsData)
+        public InGameManager(InGameUIManager inGameUIManager, Player player, WeaponsData weaponsData,
+            BulletController bulletController)
         {
             this._inGameUIManager = inGameUIManager;
             this._player = player;
             this._weaponsData = weaponsData;
+            this._bulletController = bulletController;
         }
 
         public void Start()
@@ -29,6 +33,11 @@ namespace Managers
             {
                 _player.SetWeapon(WeaponFactory.GenerateWeapon(_weaponsData.HandGun, _player.GetHandTransform()));
             });
+        }
+
+        public void Tick()
+        {
+            _bulletController.UpdateBullet();
         }
     }
 }
