@@ -8,5 +8,6 @@ var searchData=
   ['startbuttonclicked_5',['StartButtonClicked',['../classUIs_1_1InGameUIManager.html#aa60fdc88779961269b21531aca71b1bc',1,'UIs::InGameUIManager']]],
   ['stop_6',['Stop',['../classPlayers_1_1HP_1_1AutoHealTask.html#af52b5d8a3f3df0d7e283f758e15aef81',1,'Players::HP::AutoHealTask']]],
   ['stungauge_2ecs_7',['StunGauge.cs',['../StunGauge_8cs.html',1,'']]],
-  ['stungaugesetting_8',['StunGaugeSetting',['../classPlayers_1_1HP_1_1StunGaugeSetting.html',1,'Players::HP']]]
+  ['stungaugesetting_8',['StunGaugeSetting',['../classPlayers_1_1HP_1_1StunGaugeSetting.html',1,'Players::HP']]],
+  ['sub_2emd_9',['Sub.md',['../Sub_8md.html',1,'']]]
 ];
