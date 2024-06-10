@@ -43,4 +43,4 @@ jobs:
 
       - name: Build site
         run: |
-          make BUILD_TYPE=coverage -k -j site
+          make BUILD_TYPE=coverage -k -j docs
