@@ -1,4 +1,3 @@
-
 # This is a basic workflow to help you get started with Actions
 
 name: CI
@@ -26,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-  
+
       - name: Install gcovr
         run: |
           sudo pip3 install gcovr
@@ -34,13 +33,6 @@ jobs:
         run: |
           sudo apt update
           sudo apt install -y --no-install-recommends graphviz doxygen
-      - name: Install googletest
-        run: |
-          git clone https://github.com/google/googletest.git
-          cd googletest
-          cmake -DBUILD_GMOCK=OFF -DCMAKE_CXX_STANDARD=11 .
-          sudo make -k -j all install
-
       - name: Build site
         run: |
           make BUILD_TYPE=coverage -k -j site
