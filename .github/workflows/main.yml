@@ -39,8 +39,8 @@ jobs:
       - name: Build site
         run: |
           doxygen ./Doxyfile
-
-#      - name: push html
+      
+      #      - name: push html
       #        run: |
       #          git config user.name auto-push
       #          git config user.email auto-push@example.com
@@ -52,4 +52,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out/site
+          publish_dir: ./html
