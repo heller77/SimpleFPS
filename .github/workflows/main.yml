@@ -40,11 +40,16 @@ jobs:
         run: |
           doxygen ./Doxyfile
 
-      - name: push html
-        run: |
-          git config user.name auto-push
-          git config user.email auto-push@example.com
-          git add ./html
-          git commit -m "auto push from ci" || echo no commits
-          git push
-
+#      - name: push html
+      #        run: |
+      #          git config user.name auto-push
+      #          git config user.email auto-push@example.com
+      #          git add ./html
+      #          git commit -m "auto push from ci" || echo no commits
+      #          git push
+      #          - name: Deploy
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out/site
