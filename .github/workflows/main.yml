@@ -1,34 +1,28 @@
-# This is a basic workflow to help you get started with Actions
+name: GenerateDocument
 
-name: CI
-
-# Controls when the workflow will run
+# on　でタイミングを指定
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # masterブランチにプッシュ、プルリクまたはgithub上でボタンを押したら実行される
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # ボタンが押されたら
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobsが実行内容
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  # GenerateDocumentという名前のjob
+  GenerateDocument:
+    # 環境
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    # ステップは、ジョブの一部として実行される一連のタスク
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # リポジトリのコードを取得
       - uses: actions/checkout@v3
-
-
-      - name: Install gcovr
-        run: |
-          sudo pip3 install gcovr
+      # graphviz and doxygenをインストール
       - name: Install graphviz and doxygen
         run: |
           sudo apt update
@@ -36,18 +30,11 @@ jobs:
           tar -xzf doxygen-1.10.0.linux.bin.tar.gz
           sudo mv doxygen-1.10.0/bin/doxygen /usr/local/bin/doxygen
           doxygen --version
-      - name: Build site
+      # doxygenでhtmlを生成
+      - name: Build
         run: |
           doxygen ./Doxyfile
-      
-      #      - name: push html
-      #        run: |
-      #          git config user.name auto-push
-      #          git config user.email auto-push@example.com
-      #          git add ./html
-      #          git commit -m "auto push from ci" || echo no commits
-      #          git push
-      #          - name: Deploy
+      # htmlフォルダをgh-pagesブランチにプッシュ
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
