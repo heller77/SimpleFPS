@@ -32,8 +32,10 @@ jobs:
       - name: Install graphviz and doxygen
         run: |
           sudo apt update
-          sudo apt install -y --no-install-recommends graphviz doxygen
+          wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
+          tar -xzf doxygen-1.10.0.linux.bin.tar.gz
+          sudo mv doxygen-1.10.0/bin/doxygen /usr/local/bin/doxygen
+          doxygen --version
       - name: Build site
         run: |
-          doxygen --version
           doxygen ./Doxyfile
