@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['doxygen_0',['Hello Doxygen!',['../index.html',1,'']]]
+  ['サブページ_0',['サブページ',['../Sub.html',1,'index']]]
 ];
