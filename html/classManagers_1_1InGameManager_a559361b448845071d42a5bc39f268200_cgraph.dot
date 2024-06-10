@@ -1,0 +1,17 @@
+digraph "Managers.InGameManager.Start"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Managers.InGameManager.Start",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Weapons.WeaponFactory.Generate\lWeapon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classWeapons_1_1WeaponFactory.html#ac08aaf0fd0d62631d74ae653d1e28686",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Players.Player.GetHandTransform",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1Player.html#added26bdd3e18b14b6f4d15fa94985a6",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Players.Player.SetWeapon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1Player.html#ae26d0e5022dbb29b3983257ad25ee1d1",tooltip=" "];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="Players.WeaponController.\lSetWeapon",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1WeaponController.html#a35762a4cb48fcac1e6a6f7f7c046f900",tooltip=" "];
+}

@@ -1,0 +1,15 @@
+digraph "Players.HP.Gauge.GaugeUtility.AutoHealMax"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="Players.HP.Gauge.GaugeUtility.\lAutoHealMax",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="Players.HP.Gauge.Gauge.Get\lGaugeMaxValue",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a921eddd1135ee5872a2ed729e53f4f93",tooltip="ゲージのマックス値を返す"];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="Players.HP.Gauge.Gauge.Get\lGaugeValue",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a572e50c5f0514b6163ed3e1536a40e55",tooltip="ゲージの値を返す"];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="Players.HP.Gauge.Gauge.IncreaseGage",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#ada34f6653c89f0030998b6eaca289fd0",tooltip="increaseValueだけゲージを増加させる"];
+}
