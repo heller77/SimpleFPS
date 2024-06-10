@@ -24,12 +24,14 @@
 */
 var NAVTREE =
 [
-  [ "SimpleFPS", "index.html", ]
+  [ "SimpleFPS", "index.html", [
+    [ "概要", "index.html", "index" ]
+  ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"Sub.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
