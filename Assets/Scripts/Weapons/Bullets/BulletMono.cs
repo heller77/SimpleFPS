@@ -9,6 +9,8 @@ namespace Weapons.Bullets
     /// </summary>
     public class BulletMono : MonoBehaviour
     {
+        [SerializeField] private float damage = 1.0f;
+
         /// <summary>
         ///     弾をオブジェクトプールに返す時に使う
         /// </summary>
@@ -55,6 +57,20 @@ namespace Weapons.Bullets
         public void UpdateMove()
         {
             transform.position += movedir;
+        }
+
+        // private void OnCollisionEnter(Collision other)
+        // {
+        //     Debug.Log("bulletmono oncollistionenter");
+        //     other.gameObject.TryGetComponent<Enemys.EnemyMono>(out var enemy);
+        //     enemy?.Attack(3);
+        // }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.Log("bulletmono oncollistionenter");
+            other.gameObject.TryGetComponent<Enemys.EnemyMono>(out var enemy);
+            enemy?.Attack(damage);
         }
     }
 }

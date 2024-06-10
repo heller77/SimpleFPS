@@ -8,9 +8,9 @@ namespace Weapons
     {
         public void Attack()
         {
-            Debug.Log("HandGun Attack!!");
+            // Debug.Log("HandGun Attack!!");
             //弾を生成、
-            BulletController._instance?.FireBullet(this.transform.position, Vector3.forward);
+            BulletController._instance?.FireBullet(this.transform.position, Vector3.forward.normalized * 0.1f);
         }
     }
 }

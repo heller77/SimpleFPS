@@ -24,7 +24,7 @@ namespace Players
         /// </summary>
         private void Attack()
         {
-            Debug.Log("weaponattack");
+            // Debug.Log("weaponattack");
             _weapon?.Attack();
         }
     }
