@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "SimpleFPS", "index.html", [
+    [ "Hello Doxygen!", "index.html", "index" ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
     ] ],
