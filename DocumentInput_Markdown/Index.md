@@ -1,5 +1,5 @@
-# Hello Doxygen!    {#mainpage}
+# 概要 {#mainpage}
 
-このドキュメントはDoxygenで作られています．
+unityで開発中のfpsゲームのドキュメントページです。
 
 - \subpage Sub
