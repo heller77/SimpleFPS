@@ -22,6 +22,9 @@ jobs:
     steps:
       # リポジトリのコードを取得
       - uses: actions/checkout@v3
+      - name: Install gcovr
+        run: |
+          sudo pip3 install gcovr
       # graphviz and doxygenをインストール
       - name: Install graphviz and doxygen
         run: |
