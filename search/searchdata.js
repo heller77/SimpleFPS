@@ -1,13 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdefghimpstuwサ概",
+  0: "_abcdefghimpstuw",
   1: "abeghimpsw",
   2: "dempuw",
   3: "abeghimpsw",
   4: "abcdfgimpstuw",
   5: "_m",
-  6: "adghms",
-  7: "サ概"
+  6: "adghms"
 };
 
 var indexSectionNames =
@@ -18,8 +17,7 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "properties",
-  7: "pages"
+  6: "properties"
 };
 
 var indexSectionLabels =
@@ -30,7 +28,6 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Properties",
-  7: "Pages"
+  6: "Properties"
 };
 
