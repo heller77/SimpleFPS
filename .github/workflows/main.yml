@@ -26,12 +26,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+  
+      - name: Install gcovr
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          sudo pip3 install gcovr
+      - name: Install graphviz and doxygen
+        run: |
+          sudo apt update
+          sudo apt install -y --no-install-recommends graphviz doxygen
+      - name: Install googletest
+        run: |
+          git clone https://github.com/google/googletest.git
+          cd googletest
+          cmake -DBUILD_GMOCK=OFF -DCMAKE_CXX_STANDARD=11 .
+          sudo make -k -j all install
+
+      - name: Build site
+        run: |
+          make BUILD_TYPE=coverage -k -j site
