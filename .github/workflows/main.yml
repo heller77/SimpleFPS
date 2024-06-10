@@ -43,4 +43,5 @@ jobs:
 
       - name: Build site
         run: |
+          doxygen --version
           make BUILD_TYPE=coverage -k -j docs
