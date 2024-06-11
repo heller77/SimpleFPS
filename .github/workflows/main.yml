@@ -32,10 +32,11 @@ jobs:
           wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
           tar -xzf doxygen-1.10.0.linux.bin.tar.gz
           sudo mv doxygen-1.10.0/bin/doxygen /usr/local/bin/doxygen
-          doxygen --version
       # doxygenでhtmlを生成
       - name: Build
         run: |
+          doxygen --version
+          dot -v
           doxygen ./Doxyfile
       # htmlフォルダをgh-pagesブランチにプッシュ
       - name: Deploy
