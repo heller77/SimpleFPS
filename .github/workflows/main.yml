@@ -32,6 +32,8 @@ jobs:
           wget https://www.doxygen.nl/files/doxygen-1.10.0.linux.bin.tar.gz
           tar -xzf doxygen-1.10.0.linux.bin.tar.gz
           sudo mv doxygen-1.10.0/bin/doxygen /usr/local/bin/doxygen
+          sudo apt update
+          sudo apt install -y --no-install-recommends graphviz
       # doxygenでhtmlを生成
       - name: Build
         run: |
