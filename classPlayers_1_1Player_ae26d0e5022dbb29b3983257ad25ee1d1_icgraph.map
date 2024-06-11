@@ -1,0 +1,5 @@
+<map id="Players.Player.SetWeapon" name="Players.Player.SetWeapon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="285,5,476,31"/>
+<area shape="rect" id="Node000002" href="$classManagers_1_1InGameManager.html#a559361b448845071d42a5bc39f268200" title=" " alt="" coords="5,5,237,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,21,238,21,238,15,272,15"/>
+</map>

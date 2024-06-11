@@ -1,0 +1,5 @@
+<map id="Players.HP.HpContaier" name="Players.HP.HpContaier">
+<area shape="rect" id="Node000001" title="HP系の管理 HP シールド　スタンゲージの管理" alt="" coords="5,79,172,104"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,5,151,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,44,91,79,86,79,86,44"/>
+</map>

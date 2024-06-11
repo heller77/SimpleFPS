@@ -1,0 +1,9 @@
+<map id="Players.HP.Gauge.Gauge.GetGaugeValue" name="Players.HP.Gauge.Gauge.GetGaugeValue">
+<area shape="rect" id="Node000001" title="ゲージの値を返す" alt="" coords="512,37,721,77"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1HP_1_1Gauge_1_1GaugeUtility.html#a316ec6447518e0adc174e060aeab3f83" title=" " alt="" coords="240,5,464,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,46,464,42,465,36,499,40"/>
+<area shape="rect" id="Node000004" href="$classPlayers_1_1HP_1_1Gauge_1_1GaugeUtility.html#aa18c6564f8bcf87a68b4b6c25492d74a" title=" " alt="" coords="240,69,464,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="499,74,465,78,464,73,498,69"/>
+<area shape="rect" id="Node000003" href="$classPlayers_1_1HP_1_1AutoHealTask.html#ac4e1476566f65fc2f28475bf24912127" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>

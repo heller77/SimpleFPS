@@ -1,0 +1,9 @@
+<map id="Players.HP.Gauge.GaugeUtility.AutoHealMin" name="Players.HP.Gauge.GaugeUtility.AutoHealMin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,229,95"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a4a378e262f521b1912a9396e98cdf754" title="ゲージを減らす（ゲージが0以下になったら、ゲージは0となる）" alt="" coords="277,5,559,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,53,277,41,331,31,332,36,278,46,217,58"/>
+<area shape="rect" id="Node000003" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a921eddd1135ee5872a2ed729e53f4f93" title="ゲージのマックス値を返す" alt="" coords="313,55,523,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,73,300,73,300,78,230,78"/>
+<area shape="rect" id="Node000004" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a572e50c5f0514b6163ed3e1536a40e55" title="ゲージの値を返す" alt="" coords="313,119,523,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,93,311,114,310,119,212,98"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Managers.InGameManager.Tick" name="Managers.InGameManager.Tick">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,233,38"/>
+<area shape="rect" id="Node000002" href="$classWeapons_1_1Bullets_1_1BulletController.html#ac83483cedc6b626325a4249d0b4320ce" title="弾更新 毎フレーム" alt="" coords="281,5,520,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,23,268,23,268,28,234,28"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Players.HP.StunGaugeSetting" name="Players.HP.StunGaugeSetting">
+<area shape="rect" id="Node000001" title=" " alt="" coords="30,183,241,208"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1HP_1_1Gauge_1_1GaugeView_1_1GaugeView.html" title="スタンゲージのview(ui管理する)" alt="" coords="27,80,244,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,134,138,182,133,182,133,134"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,129,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="88,39,121,78,117,82,84,43"/>
+<area shape="rect" id="Node000004" href="$interfacePlayers_1_1HP_1_1Gauge_1_1GaugeView_1_1IGaugeView.html" title=" " alt="" coords="153,5,253,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="187,43,153,82,149,78,183,39"/>
+</map>

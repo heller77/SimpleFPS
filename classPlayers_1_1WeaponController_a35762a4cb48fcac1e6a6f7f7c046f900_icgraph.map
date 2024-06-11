@@ -1,0 +1,7 @@
+<map id="Players.WeaponController.SetWeapon" name="Players.WeaponController.SetWeapon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="524,5,717,45"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1Player.html#ae26d0e5022dbb29b3983257ad25ee1d1" title=" " alt="" coords="285,13,476,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="510,28,476,28,476,23,510,23"/>
+<area shape="rect" id="Node000003" href="$classManagers_1_1InGameManager.html#a559361b448845071d42a5bc39f268200" title=" " alt="" coords="5,13,237,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,28,238,28,238,23,272,23"/>
+</map>

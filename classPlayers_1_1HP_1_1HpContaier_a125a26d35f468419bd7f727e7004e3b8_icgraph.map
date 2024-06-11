@@ -1,0 +1,5 @@
+<map id="Players.HP.HpContaier.Attack" name="Players.HP.HpContaier.Attack">
+<area shape="rect" id="Node000001" title="HPとアーマ　スタンゲージへ攻撃" alt="" coords="259,5,471,31"/>
+<area shape="rect" id="Node000002" href="$classEnemys_1_1EnemyMono.html#a9a6e1fc108472ff68193d6580f7c6b46" title=" " alt="" coords="5,5,211,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,21,211,21,211,15,245,15"/>
+</map>

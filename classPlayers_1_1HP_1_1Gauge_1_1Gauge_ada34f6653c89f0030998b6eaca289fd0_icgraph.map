@@ -1,0 +1,7 @@
+<map id="Players.HP.Gauge.Gauge.IncreaseGage" name="Players.HP.Gauge.Gauge.IncreaseGage">
+<area shape="rect" id="Node000001" title="increaseValueだけゲージを増加させる" alt="" coords="512,13,787,38"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1HP_1_1Gauge_1_1GaugeUtility.html#a316ec6447518e0adc174e060aeab3f83" title=" " alt="" coords="240,5,464,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="498,28,464,28,464,23,498,23"/>
+<area shape="rect" id="Node000003" href="$classPlayers_1_1HP_1_1AutoHealTask.html#ac4e1476566f65fc2f28475bf24912127" title=" " alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,28,192,28,192,23,226,23"/>
+</map>

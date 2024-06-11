@@ -1,0 +1,5 @@
+<map id="Weapons.Bullets.BulletController.UpdateBullet" name="Weapons.Bullets.BulletController.UpdateBullet">
+<area shape="rect" id="Node000001" title="弾更新 毎フレーム" alt="" coords="281,5,520,45"/>
+<area shape="rect" id="Node000002" href="$classManagers_1_1InGameManager.html#a2e3f4f8130c4896d17232f55cc6d7373" title=" " alt="" coords="5,13,233,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="268,28,234,28,234,23,268,23"/>
+</map>

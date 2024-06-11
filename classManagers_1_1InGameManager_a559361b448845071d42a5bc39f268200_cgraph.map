@@ -1,0 +1,11 @@
+<map id="Managers.InGameManager.Start" name="Managers.InGameManager.Start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,70,237,95"/>
+<area shape="rect" id="Node000002" href="$classWeapons_1_1WeaponFactory.html#ac08aaf0fd0d62631d74ae653d1e28686" title=" " alt="" coords="285,5,532,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,67,294,45,295,51,186,73"/>
+<area shape="rect" id="Node000003" href="$classPlayers_1_1Player.html#added26bdd3e18b14b6f4d15fa94985a6" title=" " alt="" coords="289,70,529,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,80,275,80,275,85,238,85"/>
+<area shape="rect" id="Node000004" href="$classPlayers_1_1Player.html#ae26d0e5022dbb29b3983257ad25ee1d1" title=" " alt="" coords="313,119,504,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,93,321,114,320,120,196,98"/>
+<area shape="rect" id="Node000005" href="$classPlayers_1_1WeaponController.html#a35762a4cb48fcac1e6a6f7f7c046f900" title=" " alt="" coords="580,112,773,152"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="504,129,566,129,566,135,504,135"/>
+</map>

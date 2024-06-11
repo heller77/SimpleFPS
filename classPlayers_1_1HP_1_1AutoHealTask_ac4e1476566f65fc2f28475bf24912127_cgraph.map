@@ -1,0 +1,11 @@
+<map id="Players.HP.AutoHealTask.StartAutoHeal" name="Players.HP.AutoHealTask.StartAutoHeal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,192,109"/>
+<area shape="rect" id="Node000002" href="$classPlayers_1_1HP_1_1Gauge_1_1GaugeUtility.html#a316ec6447518e0adc174e060aeab3f83" title=" " alt="" coords="240,69,464,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,87,226,87,226,92,192,92"/>
+<area shape="rect" id="Node000003" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a921eddd1135ee5872a2ed729e53f4f93" title="ゲージのマックス値を返す" alt="" coords="545,5,754,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="445,67,542,46,543,51,446,72"/>
+<area shape="rect" id="Node000004" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#a572e50c5f0514b6163ed3e1536a40e55" title="ゲージの値を返す" alt="" coords="545,69,754,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="464,87,531,87,531,92,464,92"/>
+<area shape="rect" id="Node000005" href="$classPlayers_1_1HP_1_1Gauge_1_1Gauge.html#ada34f6653c89f0030998b6eaca289fd0" title="increaseValueだけゲージを増加させる" alt="" coords="512,134,787,159"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="452,107,513,119,566,129,565,134,511,124,451,112"/>
+</map>
