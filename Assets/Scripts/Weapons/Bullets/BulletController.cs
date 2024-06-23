@@ -28,7 +28,7 @@ namespace Weapons.Bullets
         /// <summary>
         /// 弾発射
         /// </summary>
-        public void FireBullet(Vector3 firePosition, Vector3 bulletMoveDir)
+        public BulletMono FireBullet(Vector3 firePosition, Vector3 bulletMoveDir)
         {
             var bullet = _bulletPool.GetBullet();
             bullet.SetMoveDir(bulletMoveDir);
@@ -36,8 +36,8 @@ namespace Weapons.Bullets
 
             bulletList.Add(bullet);
 
-
             bullet.destroyEvent.Subscribe(_ => { bulletList.Remove(bullet); }).AddTo(bullet);
+            return bullet;
         }
 
         /// <summary>
