@@ -1,4 +1,6 @@
 ﻿using System;
+using Managers;
+using ObjectIDs;
 using R3;
 using UnityEngine;
 
@@ -24,6 +26,16 @@ namespace Weapons.Bullets
         public Observable<Unit> destroyEvent
         {
             get { return destroy; }
+        }
+
+        private readonly Subject<HitInfo> _hit = new Subject<HitInfo>();
+
+        /// <summary>
+        ///     銃弾がぶつかった時に発火
+        /// </summary>
+        public Observable<HitInfo> HitEvent
+        {
+            get { return _hit; }
         }
 
         private Vector3 movedir;
@@ -69,8 +81,10 @@ namespace Weapons.Bullets
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("bulletmono oncollistionenter");
-            other.gameObject.TryGetComponent<Enemys.EnemyMono>(out var enemy);
-            enemy?.Attack(damage);
+            other.gameObject.TryGetComponent<ObjectIdentify>(out var objectIdentify);
+            HitInfo hitInfo = new HitInfo(this.gameObject, objectIdentify.gameObject, this.transform.position,
+                Vector3.up);
+            _hit.OnNext(hitInfo);
         }
     }
 }
