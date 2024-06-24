@@ -1,15 +1,19 @@
 ﻿using Datas;
+using Managers;
 using UnityEngine;
 
 namespace Weapons
 {
     public class WeaponFactory : MonoBehaviour
     {
-        public static IAttackable GenerateWeapon(GameObject weaponPrefab, Transform generateParent)
+        public static IWeapon GenerateWeapon(GameObject weaponPrefab, Transform generateParent,
+            HitManager hitManager)
         {
             Debug.Log("generate weapon !!");
             var weaponInstance = Instantiate(weaponPrefab, generateParent, false);
-            return weaponInstance.GetComponent<IAttackable>();
+            var weapon = weaponInstance.GetComponent<IWeapon>();
+            weapon.SetHitManager(hitManager);
+            return weapon;
         }
     }
 }

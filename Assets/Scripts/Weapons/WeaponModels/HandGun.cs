@@ -5,13 +5,13 @@ using Weapons.Bullets;
 
 namespace Weapons
 {
-    public class HandGun : MonoBehaviour, IAttackable, IWeapon
+    public class HandGun : MonoBehaviour, IWeapon
     {
         private HitManager _hitManager;
 
-        public void Initialize(HitManager hitManager)
+        public void SetHitManager(HitManager hitManager)
         {
-            this._hitManager = hitManager;
+            _hitManager = hitManager;
         }
 
         public void Attack()
@@ -20,6 +20,7 @@ namespace Weapons
             //弾を生成、
             var bulletMono =
                 BulletController._instance?.FireBullet(this.transform.position, Vector3.forward.normalized * 0.1f);
+            //銃弾があたったら、HitManagerに
             bulletMono?.HitEvent.Subscribe(HitInfo => { _hitManager.ProcessHit(HitInfo); });
         }
     }

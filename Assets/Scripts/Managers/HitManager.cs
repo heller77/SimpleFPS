@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ObjectIDs;
 using UnityEditor.Build.Content;
 using UnityEngine;
@@ -34,6 +35,21 @@ namespace Managers
         private Dictionary<ObjectID, IHitTargetHandler> _hitTargetHandlers =
             new Dictionary<ObjectID, IHitTargetHandler>();
 
+        private static HitTargetDatabase _instance;
+
+        public static HitTargetDatabase Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new HitTargetDatabase();
+                }
+
+                return _instance;
+            }
+        }
+
         public IHitTargetHandler GetHitTarget(ObjectID id)
         {
             return this._hitTargetHandlers[id];
@@ -47,7 +63,17 @@ namespace Managers
 
     public class HitManager
     {
-        private HitTargetDatabase _hitTargetDatabase;
+        private static int generateNum = 0;
+
+        public HitManager()
+        {
+            if (generateNum >= 1)
+            {
+                throw new Exception("HitManagerが二つ生成されています。");
+            }
+
+            generateNum++;
+        }
 
         /// <summary>
         /// 攻撃を実行する
@@ -56,9 +82,9 @@ namespace Managers
         public void ProcessHit(HitInfo hitInfo)
         {
             // ObjectIdentify 
-            var hitID = hitInfo.HitObject.GetComponent<ObjectIdentify>();
-            var hitHandler = _hitTargetDatabase.GetHitTarget(hitID.GetID());
-            
+            var hitID = hitInfo.HitObject.GetComponent<HitTargetObjectIdentify>();
+            var hitHandler = HitTargetDatabase.Instance.GetHitTarget(hitID.GetID());
+
             if (hitHandler != null)
             {
                 hitHandler.HandleHit(hitInfo);

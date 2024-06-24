@@ -81,10 +81,20 @@ namespace Weapons.Bullets
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("bulletmono oncollistionenter");
-            other.gameObject.TryGetComponent<ObjectIdentify>(out var objectIdentify);
-            HitInfo hitInfo = new HitInfo(this.gameObject, objectIdentify.gameObject, this.transform.position,
-                Vector3.up);
-            _hit.OnNext(hitInfo);
+            other.gameObject.TryGetComponent<HitTargetObjectIdentify>(out var objectIdentify);
+            if (objectIdentify != null)
+            {
+                Debug.Log("hit! to hittargetobjectidentify");
+                HitInfo hitInfo = new HitInfo(this.gameObject, objectIdentify.gameObject, this.transform.position,
+                    Vector3.up);
+                if (hitInfo != null)
+                {
+                    Debug.Log("hitinfo はnullではない");
+                }
+
+                //銃弾がヒットしたことを通知
+                _hit.OnNext(hitInfo);
+            }
         }
     }
 }

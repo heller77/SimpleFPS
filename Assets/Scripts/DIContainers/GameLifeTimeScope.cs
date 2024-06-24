@@ -31,6 +31,7 @@ namespace DIContainers
             builder.RegisterInstance(_bulletPool);
             builder.RegisterInstance(_bulletPrefab);
 
+            builder.Register<HitManager>(Lifetime.Singleton);
             builder.Register<BulletController>(Lifetime.Singleton);
             builder.Register<InGameManager>(Lifetime.Singleton);
             builder.Register<PlayerMover>(Lifetime.Singleton);
