@@ -1,5 +1,6 @@
 ﻿using System;
 using Managers;
+using Managers.Hits;
 using UnityEngine;
 
 namespace ObjectIDs
@@ -7,7 +8,7 @@ namespace ObjectIDs
     /// <summary>
     /// オブジェクトの識別子
     /// </summary>
-    public class HitTargetObjectIdentify : MonoBehaviour , IHitTargetHandler
+    public class HitTargetObjectIdentify : MonoBehaviour
     {
         private ObjectIDs.ObjectID _idref;
 
@@ -30,7 +31,7 @@ namespace ObjectIDs
         public void Initialize(ObjectID objectID)
         {
             this._idref = objectID;
-            HitTargetDatabase.Instance.AddHitTarget(this._idref,this);
+            HitTargetDatabase.Instance.AddHitTarget(this._idref, new PlayerHitTargetHandler());
         }
 
         /// <summary>
@@ -40,11 +41,6 @@ namespace ObjectIDs
         public ObjectID GetID()
         {
             return _idref;
-        }
-
-        public void HandleHit(HitInfo hitInfo)
-        {
-            
         }
     }
 }
