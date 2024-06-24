@@ -30,7 +30,7 @@ namespace Players
             this._playerMover.Move(moveValue * Time.deltaTime);
         }
 
-        public void SetWeapon(IAttackable weapon)
+        public void SetWeapon(IWeapon weapon)
         {
             _weaponController.SetWeapon(weapon);
         }

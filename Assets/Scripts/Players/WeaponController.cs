@@ -7,14 +7,14 @@ namespace Players
 {
     public class WeaponController
     {
-        private IAttackable _weapon;
+        private IWeapon _weapon;
 
         public WeaponController(MyInput myInput)
         {
             myInput.Attack.Subscribe(_ => { Attack(); });
         }
 
-        public void SetWeapon(IAttackable weapon)
+        public void SetWeapon(IWeapon weapon)
         {
             this._weapon = weapon;
         }
