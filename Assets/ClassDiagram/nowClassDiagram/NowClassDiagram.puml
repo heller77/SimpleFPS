@@ -17,6 +17,7 @@ class WeaponController{
 
 }
 HandGun -* BulletController
+HandGun -* HitManager
 BulletController --* BulletPool
 BulletPool -* BulletMono
 class HandGun extends IWeapon,IAttackable{}
@@ -30,6 +31,8 @@ class InGameManager{}
 class BulletMono{}
 class BulletPool{}
 class BulletController{}
+
+class HitManager{}
 
 
 @enduml
