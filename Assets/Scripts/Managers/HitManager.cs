@@ -12,13 +12,15 @@ namespace Managers
         public GameObject HitObject { get; }
         public Vector3 HitPoint { get; }
         public Vector3 HitNormal { get; }
+        public float Damage { get; }
 
-        public HitInfo(GameObject bullet, GameObject hitObject, Vector3 hitPoint, Vector3 hitNormal)
+        public HitInfo(float damage, GameObject bullet, GameObject hitObject, Vector3 hitPoint, Vector3 hitNormal)
         {
             Bullet = bullet;
             HitObject = hitObject;
             HitPoint = hitPoint;
             HitNormal = hitNormal;
+            this.Damage = damage;
         }
     }
 

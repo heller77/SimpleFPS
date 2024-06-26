@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 
-namespace Managers.Hits
+namespace SimpleFPS.Weapons.Hits
 {
     public class DestructionHitTargetHandler : MonoBehaviour, IHitTargetHandler
     {

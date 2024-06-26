@@ -1,6 +1,5 @@
 ﻿using System;
 using Managers;
-using Managers.Hits;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -15,6 +14,7 @@ namespace ObjectIDs
         /// スクリプトからIHitTargetHandlerを設定
         /// </summary>
         Script,
+
         /// <summary>
         /// エディタからIHitTargetHandlerを設定
         /// </summary>
@@ -23,6 +23,7 @@ namespace ObjectIDs
 
     /// <summary>
     /// 攻撃があたったオブジェクトの識別子
+    /// * スクリプトもしくはエディタからidとIHitTargetHandlerを初期化する必要あり*
     /// </summary>
     public class HitTargetObjectIdentify : MonoBehaviour
     {
@@ -31,7 +32,7 @@ namespace ObjectIDs
         [Tooltip("このコンポーネント内部でオブジェクトidを生成するかどうか(外部のスクリプトから設定したい場合はoff)")] [SerializeField]
         private bool generateIDMySelf = true;
 
-        [FormerlySerializedAs("hitTargetType")] [SerializeField] private SetTypeforHitTargetType setTypeforHitTargetType;
+        [SerializeField] private SetTypeforHitTargetType setTypeforHitTargetType;
 
         public SetTypeforHitTargetType SetTypeforHitTargetType
         {

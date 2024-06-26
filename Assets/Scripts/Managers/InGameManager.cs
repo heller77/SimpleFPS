@@ -17,15 +17,17 @@ namespace Managers
         private WeaponsData _weaponsData;
         private BulletController _bulletController;
         private HitManager _hitManager;
+        private PlayerObjectManager _playerObjectManager;
 
         public InGameManager(InGameUIManager inGameUIManager, Player player, WeaponsData weaponsData,
-            BulletController bulletController, HitManager hitManager)
+            BulletController bulletController, HitManager hitManager, PlayerObjectManager _playerObjectManager)
         {
             this._inGameUIManager = inGameUIManager;
             this._player = player;
             this._weaponsData = weaponsData;
             this._bulletController = bulletController;
             this._hitManager = hitManager;
+            this._playerObjectManager = _playerObjectManager;
         }
 
         public void Start()
@@ -35,6 +37,8 @@ namespace Managers
             {
                 _player.SetWeapon(WeaponFactory.GenerateWeapon(_weaponsData.HandGun, _player.GetHandTransform(),
                     _hitManager));
+                //敵を生成
+                _playerObjectManager.GeneratePlayer();
             });
         }
 
