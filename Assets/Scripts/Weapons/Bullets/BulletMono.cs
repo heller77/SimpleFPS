@@ -87,7 +87,7 @@ namespace Weapons.Bullets
                 Debug.Log("hit! to hittargetobjectidentify");
                 HitInfo hitInfo = new HitInfo(damage, this.gameObject, objectIdentify.gameObject,
                     this.transform.position,
-                    Vector3.up);
+                    Vector3.up, objectIdentify.GetID());
                 if (hitInfo != null)
                 {
                     Debug.Log("hitinfo はnullではない");

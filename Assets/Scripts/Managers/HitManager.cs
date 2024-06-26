@@ -9,17 +9,20 @@ namespace Managers
     public class HitInfo
     {
         public GameObject Bullet { get; }
+        public ObjectID targetObjectID { get; }
         public GameObject HitObject { get; }
         public Vector3 HitPoint { get; }
         public Vector3 HitNormal { get; }
         public float Damage { get; }
 
-        public HitInfo(float damage, GameObject bullet, GameObject hitObject, Vector3 hitPoint, Vector3 hitNormal)
+        public HitInfo(float damage, GameObject bullet, GameObject hitObject, Vector3 hitPoint, Vector3 hitNormal,
+            ObjectID targetObjectID)
         {
             Bullet = bullet;
             HitObject = hitObject;
             HitPoint = hitPoint;
             HitNormal = hitNormal;
+            this.targetObjectID = targetObjectID;
             this.Damage = damage;
         }
     }
@@ -84,8 +87,8 @@ namespace Managers
         public void ProcessHit(HitInfo hitInfo)
         {
             // ObjectIdentify 
-            var hitID = hitInfo.HitObject.GetComponent<HitTargetObjectIdentify>();
-            var hitHandler = HitTargetDatabase.Instance.GetHitTarget(hitID.GetID());
+            var hitID = hitInfo.targetObjectID;
+            var hitHandler = HitTargetDatabase.Instance.GetHitTarget(hitID);
 
             if (hitHandler != null)
             {
