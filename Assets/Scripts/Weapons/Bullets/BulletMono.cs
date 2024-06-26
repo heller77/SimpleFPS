@@ -82,18 +82,22 @@ namespace Weapons.Bullets
         {
             Debug.Log("bulletmono oncollistionenter");
             other.gameObject.TryGetComponent<HitTargetObjectIdentify>(out var objectIdentify);
+            other.gameObject.TryGetComponent<RefHitTargetObjectIdentify>(out var refHitTargetObjectIdentify);
+            HitInfo hitInfo = null;
             if (objectIdentify != null)
             {
-                Debug.Log("hit! to hittargetobjectidentify");
-                HitInfo hitInfo = new HitInfo(damage, this.gameObject, objectIdentify.gameObject,
+                hitInfo = new HitInfo(damage, this.gameObject, objectIdentify.gameObject,
                     this.transform.position,
                     Vector3.up, objectIdentify.GetID());
-                if (hitInfo != null)
-                {
-                    Debug.Log("hitinfo はnullではない");
-                }
-
-                //銃弾がヒットしたことを通知
+                Debug.Log("hit any object by bulletMono!!");
+                _hit.OnNext(hitInfo);
+            }
+            else if (refHitTargetObjectIdentify != null)
+            {
+                hitInfo = new HitInfo(damage, this.gameObject, refHitTargetObjectIdentify.gameObject,
+                    this.transform.position,
+                    Vector3.up, refHitTargetObjectIdentify.GetID());
+                Debug.Log("hit any object by bulletMono!!");
                 _hit.OnNext(hitInfo);
             }
         }
